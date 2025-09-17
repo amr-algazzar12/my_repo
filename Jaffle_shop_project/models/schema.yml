@@ -1,0 +1,30 @@
+version: 2
+models:
+  - name: customers
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+  - name: orders
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+      - name: credit_card_amount
+        tests:
+          - not_null
+      - name: coupon_amount
+        tests:
+          - not_null
+      - name: bank_transfer_amount
+        tests:
+          - not_null
+      - name: gift_card_amount
+        tests:
+          - not_null
+# credit_card', 'coupon', 'bank_transfer', 'gift_card
